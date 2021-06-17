@@ -9,9 +9,6 @@
     white-space:unset;
     text-align: center;
 }
-.info:hover{
-    box-shadow: 0px 10px 18px #888888;
-}
 @media (max-width:800px) {
     .graph{
         width: 100%;

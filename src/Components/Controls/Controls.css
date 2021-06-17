@@ -4,8 +4,9 @@
     overflow: auto;
     position: absolute;
     background: white;
-    border: 2px solid;
+    box-shadow: 0px 10px 18px #888888;
     border-radius: 8px;
+    padding: 13px;
     margin-left: 10%;
 }
 .multiple{
@@ -15,6 +16,56 @@
 }
 
 .multiple:hover ~ .multiple-option{
+    display: block;
+}
+
+.multiple-option-cat{
+    display: none;
+    margin-top: -19px;
+    height: 200px;
+    overflow: auto;
+    position: absolute;
+    background: white;
+    padding: 13px;
+    box-shadow: 0px 10px 18px #888888;
+    border-radius: 8px;
+    margin-left: 10%;
+}
+.multiple-cat{
+    cursor: pointer;
+    text-align: center;
+    width: 81%;
+}
+.multiple-option-cat:hover{
+    display: block;
+}
+
+.multiple-cat:hover ~ .multiple-option-cat{
+    display: block;
+}
+
+.multiple-option-cat-map{
+    display: none;
+    margin-top: -19px;
+    height: 200px;
+    overflow: auto;
+    position: absolute;
+    background: white;
+    padding: 13px;
+    box-shadow: 0px 10px 18px #888888;
+    border-radius: 8px;
+    margin-left: 10%;
+}
+.multiple-cat-map{
+    cursor: pointer;
+    text-align: center;
+    width: 81%;
+}
+.multiple-cat-map:hover ~ .multiple-option-cat-map{
+    display: block;
+}
+
+.multiple-option-cat-map:hover{
     display: block;
 }
 
@@ -41,4 +92,15 @@
 }
 .button:hover{
     background: #384350;
+}
+
+.hov:hover{
+    box-shadow: 0px 10px 18px #888888;
+}
+
+@media (max-width:800px) {
+    .multiple-option-cat{
+        margin-left: -22%;
+    }
+    
 }

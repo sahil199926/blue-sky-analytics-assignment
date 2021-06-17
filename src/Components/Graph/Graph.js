@@ -3,30 +3,39 @@ import './Graph.css'
 import country_data from "../../DatasSet Raw/greenhouse_gas_inventory_JSON.json"
 import { Line } from "react-chartjs-2";
 import Constdata from '../../Constant/Constants';
-function Graph({ category, multipleCountries }) {
+function Graph({ category, multipleCountries,ticked,singleCat}){
+console.log(Object.values(country_data['Russia']['co2_without_land']))
   let renderData
-  if (multipleCountries.length) {
+  if (singleCat) {
+    console.log(ticked,multipleCountries)
     renderData = []
     for (let i in multipleCountries) {
       renderData.push({
         label: multipleCountries[i],
-        data: Object.values(country_data[multipleCountries[i]][category]),
+        data: Object.values(country_data[multipleCountries[i]][ticked]),
         fill: true,
         backgroundColor: Constdata.Colors[i].backgroundColor,
         borderColor:Constdata.Colors[i].borderColor
       })
     }
   }
-  const [datasets, setDataset] = useState([
-    {
-      label: 'Australia',
-      data: Object.values(country_data['Australia'][category]),
-      fill: true,
-      backgroundColor: "rgba(49,52,198,0.2)",
-      borderColor: "rgba(198,49,192,1)"
-    },
+  else{
+    console.log(ticked,multipleCountries,category)
+ 
+    renderData = []
+    for (let i in category) {
+      console.log(multipleCountries[0])
+      renderData.push({
+        label: category[i],
+        data: Object.values(country_data[multipleCountries[0]][category[i]]),
+        fill: true,
+        backgroundColor: Constdata.Colors[i].backgroundColor,
+        borderColor:Constdata.Colors[i].borderColor
+      })
+    }
 
-  ])
+  }
+  const [datasets, setDataset] = useState(renderData)
   const data = {
     labels: Constdata.years,
     datasets: datasets
@@ -39,7 +48,7 @@ function Graph({ category, multipleCountries }) {
   useEffect(() => {
     setDataset(renderData)
     RenderGraph()
-  }, [category, multipleCountries])
+  }, [ticked,category,singleCat ,multipleCountries])
   return (<>
     <div className='graph'>
     <p className='info' >This graph represent how the {category} have increased or decreased in {multipleCountries.map(i => <b>{i}, </b> )} over the span of years 1990-2014 </p>

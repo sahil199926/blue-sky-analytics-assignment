@@ -5,11 +5,15 @@ import Map from './Components/Map/Map'
 import ReactTooltip from "react-tooltip";
 import Controls from "./Components/Controls/Controls";
 import Info from "./Components/Info/Info";
+import Constdata from "./Constant/Constants";
 function App() {
   const [content, setContent] = useState("");
-  const [category, setCategory] = useState("carbon_dioxide_co2_emissions_without_land_use_land_use_change_and_forestry_lulucf_in_kilotonne_co2_equivalent");
+  const [category, setCategory] = useState([Constdata.categoryOption[0]]);
   const [year, setYear] = useState("1990");
   const [multipleCountries,setMultipleCountries]=useState(['Australia']);
+  const [singleCat, setSingleTick] = useState(false)
+  const [ticked, setTicked] = useState(Constdata.categoryOption[0])
+
   return (
 
     <div className="App">
@@ -21,12 +25,18 @@ function App() {
             setCategory={setCategory}
             setYear={setYear}
             setMultipleCountries={setMultipleCountries}
+            singleCat={singleCat}
+            setSingleTick={setSingleTick}
+            ticked={ticked}
+            setTicked={setTicked}
           />
         </div>
 
         <Graph
           category={category}
           multipleCountries={multipleCountries}
+          singleCat={singleCat}
+          ticked={ticked}
         />
       </div>
       <Map
