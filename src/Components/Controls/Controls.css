@@ -1,0 +1,44 @@
+.multiple-option{
+    display: none;
+    height: 200px;
+    overflow: auto;
+    position: absolute;
+    background: white;
+    border: 2px solid;
+    border-radius: 8px;
+    margin-left: 10%;
+}
+.multiple{
+    cursor: pointer;
+    text-align: center;
+    width: 81%;
+}
+
+.multiple:hover ~ .multiple-option{
+    display: block;
+}
+
+.multiple-option:hover{
+    display: block;
+}
+.button{
+    width: 19%;
+    font-size: 18px;
+    background: #21262c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    min-width: 52px;
+}
+.button-disable{
+    width: 19%;
+    font-size: 18px;
+    background: #5c6675;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    min-width: 52px;
+}
+.button:hover{
+    background: #384350;
+}
