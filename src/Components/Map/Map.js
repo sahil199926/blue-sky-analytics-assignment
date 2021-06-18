@@ -34,8 +34,8 @@ const Map = ({ setTooltipContent, mapCategory, year }) => {
       <div><p className='info'>Map representing <b>{mapCategory}</b> in year <b style={{ color: yearNotice }}>{year}</b></p></div>
       <div className="MapLegand">
         <div className="MapLegandImg"  ><img style={{ width: '140px' }} src="https://res.cloudinary.com/span/image/upload/v1624035863/Personal/colorPall_nyhywx.jpg" /><p>Less Value to High</p></div>
-        <div className="MapLegandImg" ><img src="https://res.cloudinary.com/span/image/upload/v1624035863/Personal/black_fzwzww.jpg" /><p>Value was there in dataSet</p></div>
-        <div className="MapLegandImg" > <img src="https://res.cloudinary.com/span/image/upload/v1624035863/Personal/white_etmwnc.jpg" /><p>No data avalable</p></div>
+        <div className="MapLegandImg" ><img src="https://res.cloudinary.com/span/image/upload/v1624035863/Personal/black_fzwzww.jpg" /><p>Value was not there in dataSet</p></div>
+        <div className="MapLegandImg" > <img src="https://res.cloudinary.com/span/image/upload/v1624035863/Personal/white_etmwnc.jpg" /><p>No data available</p></div>
       </div>
       <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
         <ZoomableGroup>
