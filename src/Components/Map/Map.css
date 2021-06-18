@@ -1,8 +1,26 @@
 .Map{
     width: 49%;
 }
+.MapLegand{
+    display:flex;
+    justify-content:space-evenly;
+}
+.MapLegandImg{
+    display: flex;
+}
+.MapLegandImg img{
+    width:19px;
+    height:18px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
 @media (max-width:800px){
    .Map{
        width: 100%;
+       
+    }
+    .MapLegand{
+        display: grid;
+        font-size:  14px;
     }
 }

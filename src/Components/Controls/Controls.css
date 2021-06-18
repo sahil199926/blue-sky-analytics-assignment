@@ -102,5 +102,28 @@
     .multiple-option-cat{
         margin-left: -22%;
     }
+
     
 }
+
+@media (max-width:540px) {
+    .options >:first-child{
+        width: 100% !important;
+    }
+    .options >:nth-child(2) {
+        width: 100% !important;
+      }
+    
+}
+
+@media (max-width:350px) {
+    .multiple{
+        width: 100%;
+    }
+    .button{
+        width: 100%;
+    height: 50px;
+    }
+}
+
+

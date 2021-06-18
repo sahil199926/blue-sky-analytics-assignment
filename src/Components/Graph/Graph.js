@@ -51,7 +51,7 @@ console.log(Object.values(country_data['Russia']['co2_without_land']))
   }, [ticked,category,singleCat ,multipleCountries])
   return (<>
     <div className='graph'>
-    <p className='info' >This graph represent how the {category} have increased or decreased in {multipleCountries.map(i => <b>{i}, </b> )} over the span of years 1990-2014 </p>
+    <p className='info' >This graph represent how the {singleCat? <b>{ticked}</b>:category.map((i)=><b>{i}, </b>)} have increased or decreased in {multipleCountries.map(i => <b>{i}, </b> )} over the span of years 1990-2014 </p>
       <RenderGraph />
      
     </div>

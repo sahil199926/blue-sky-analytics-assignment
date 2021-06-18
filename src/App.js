@@ -11,9 +11,9 @@ function App() {
   const [category, setCategory] = useState([Constdata.categoryOption[0]]);
   const [year, setYear] = useState("1990");
   const [multipleCountries,setMultipleCountries]=useState(['Australia']);
-  const [singleCat, setSingleTick] = useState(false)
+  const [singleCat, setSingleCat] = useState(false)
   const [ticked, setTicked] = useState(Constdata.categoryOption[0])
-
+  const [mapCategory,setMapCategory]=useState(Constdata.categoryOption[0])
   return (
 
     <div className="App">
@@ -26,9 +26,12 @@ function App() {
             setYear={setYear}
             setMultipleCountries={setMultipleCountries}
             singleCat={singleCat}
-            setSingleTick={setSingleTick}
+            setSingleCat={setSingleCat}
             ticked={ticked}
             setTicked={setTicked}
+            mapCategory={mapCategory}
+            setMapCategory={setMapCategory}
+            set
           />
         </div>
 
@@ -41,7 +44,7 @@ function App() {
       </div>
       <Map
         setTooltipContent={setContent}
-        category={category}
+        mapCategory={mapCategory}
          year={year}
       />
       <ReactTooltip>{content}</ReactTooltip>

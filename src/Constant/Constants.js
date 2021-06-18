@@ -1,6 +1,6 @@
 const Constdata = {
        categoryOption: ['co2_without_land', 'ghgs', 'ghgs_without_land', 'hfcs',
-       'ch4_without_land', 'nnf3', 'n2o_without_land', 'pfcs', 'sf6t',
+       'ch4_without_land', 'nnf3', 'n2o_without_land', 'pfcs', 'sf6',
        'mix_of_hfcs_and_pfcs']
 
        ,
