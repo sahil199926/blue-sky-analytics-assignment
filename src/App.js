@@ -23,7 +23,6 @@ function App() {
           <Controls
             setYear={setYear}
             setCategory={setCategory}
-            setYear={setYear}
             setMultipleCountries={setMultipleCountries}
             singleCat={singleCat}
             setSingleCat={setSingleCat}
@@ -31,7 +30,6 @@ function App() {
             setTicked={setTicked}
             mapCategory={mapCategory}
             setMapCategory={setMapCategory}
-            set
           />
         </div>
 
