@@ -37,7 +37,10 @@ function Controls({ setCategory, setYear, setMultipleCountries, singleCat, setSi
         setMultipleCountries(multipleCountry)
         setCategory(multipleCategories)
     }
-
+useEffect(() => {
+    submitMultipleCountries()
+    
+}, [multipleCountry])
     return (
         <><div style={{ width: '15%', minWidth: "69px" }} >
             <select onChange={(e) => { setYear(e.target.value) }}>

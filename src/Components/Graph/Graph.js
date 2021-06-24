@@ -40,9 +40,33 @@ function Graph({ category, multipleCountries,ticked,singleCat}){
   }
 
   useEffect(() => {
+    if (singleCat) {
+      renderData = []
+      for (let i in multipleCountries) {
+        renderData.push({
+          label: multipleCountries[i],
+          data: Object.values(country_data[multipleCountries[i]][ticked]),
+          fill: true,
+          backgroundColor: Constdata.Colors[i].backgroundColor,
+          borderColor:Constdata.Colors[i].borderColor
+        })
+      }
+    }
+    else{
+      renderData = []
+      for (let i in category) {
+        renderData.push({
+          label: category[i],
+          data: Object.values(country_data[multipleCountries[0]][category[i]]),
+          fill: true,
+          backgroundColor: Constdata.Colors[i].backgroundColor,
+          borderColor:Constdata.Colors[i].borderColor
+        })
+      }
+    }
     setDataset(renderData)
     RenderGraph()
-  }, [ticked,category,singleCat])
+  }, [ticked,category,singleCat,multipleCountries])
 
   return (<>
     <div className='graph'>
